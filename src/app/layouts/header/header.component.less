@@ -1,0 +1,97 @@
+@import '../../../defines';
+
+@header-sm-height: 32px;
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 8px #f0f1f2;
+  position: relative;
+  z-index: 10;
+  max-width: 100%;
+  line-height: 22px;
+  @media only screen and (max-width: @screen-sm-max + 0.5) {
+    position: fixed;
+    width: 100%;
+    height: @header-sm-height;
+  }
+}
+
+.search-box {
+  border-left: 1px solid #ebedf0;
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 16px;
+  margin: 22px auto 0;
+  nz-input-group {
+    height: 20px;
+  }
+  input {
+    border: 0;
+    outline: none;
+    height: 11px;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.header-action {
+  float: right;
+  margin-top: 20px;
+  margin-left: 16px;
+  color: rgba(0,0,0,.65);
+  border-color: #d9d9d9;
+  margin-right: 40px;
+  transition: none;
+}
+
+.nav-phone-icon {
+  display: none;
+  position: absolute;
+  left: 30px;
+  top: 8px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  @media (max-width: @screen-sm-max + 0.5) {
+    display: block;
+  }
+}
+
+#logo {
+  overflow: hidden;
+  padding-left: 40px;
+  float: left;
+  height: 64px;
+  line-height: 64px;
+  text-decoration: none;
+  white-space: nowrap;
+  @media (max-width: @sizes[lg]) {
+    padding: 0 40px;
+  }
+  img {
+    height: 32px;
+    margin-right: 16px;
+    +img {
+      height: 16px;
+      position: relative;
+      top: 1px;
+    }
+  }
+  @media (max-width: @screen-sm-max + 0.5) {
+    float: initial;
+    height: @header-sm-height;
+    line-height: @header-sm-height;
+    img {
+      height: @header-sm-height - 6;
+      margin-bottom: 3px;
+      +img {
+        height: (@header-sm-height - 6) / 2;
+      }
+    }
+  }
+}

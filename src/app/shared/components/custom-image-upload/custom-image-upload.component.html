@@ -1,0 +1,12 @@
+<nz-upload [nzAction]="uploadImageUrl" nzListType="picture-card" [(nzFileList)]="displayImages"
+  [nzShowButton]="!displayImages || displayImages.length === 0 || displayImages.length < limitImagesQuantity"
+  [nzPreview]="onPreviewImage" (nzChange)="onUploadImage($event)">
+  <i nz-icon type="plus"></i>
+  <div class="ant-upload-text">Upload</div>
+</nz-upload>
+
+<nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+  <ng-template #modalContent>
+    <img *ngIf="previewImage" [src]="previewImage" class="w-100" />
+  </ng-template>
+</nz-modal>

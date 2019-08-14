@@ -1,0 +1,24 @@
+<nz-card nzTitle="EMI">
+    <form nz-form [formGroup]="form" class="login-form" (ngSubmit)="submitForm()">
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Nhap So tien Vay!">
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="text" nz-input formControlName="month" placeholder="Nhap So thang con lai" />
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Password!">
+                <nz-input-group nzPrefixIcon="lock">
+                    <input type="text" nz-input formControlName="fee" placeholder="Nhap phi phai tra" />
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control>
+                <button nz-button class="login-form-button" [nzType]="'primary'">Submit</button>
+            </nz-form-control>
+        </nz-form-item>
+    </form>
+</nz-card>
+

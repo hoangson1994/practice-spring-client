@@ -1,0 +1,34 @@
+@import '../defines';
+.page-wrapper {
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+.main-wrapper {
+  background: #fff;
+  padding: 0;
+  position: relative;
+  [nz-row] {
+    display: flex;
+    @media (max-width: @screen-sm-max) {
+      flex-direction: column;
+    }
+  }
+}
+.md-hidden {
+  @media (max-width: @sizes[md]) {
+    display: none;
+  }
+}
+.content-container {
+  margin: 32px 0 0 0;
+  @media (min-width: @screen-md-min) {
+    margin: 24px 24px 0;
+  }
+}
+.sidebar-bg {
+  background: #fff;
+}
+.content-bg {
+  background: #f0f2f5;
+}

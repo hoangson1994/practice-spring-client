@@ -1,0 +1,28 @@
+<header class="clearfix">
+  <i nz-icon type="menu-unfold" class="nav-phone-icon" theme="outline" (click)="triggerBtn()"></i>
+  <section nz-row>
+    <div nz-col [nzSm]="24" [nzXs]="24" [nzMd]="7" [nzXl]="5" [nzXXl]="4" class="text-sm-center">
+      <a href="" id="logo">
+        <img alt="logo" src="https://ng.ant.design/assets/img/logo.svg">
+        <img alt="NG-ZORRO" src="https://ng.ant.design/assets/img/zorro.svg">
+      </a>
+    </div>
+
+    <div nz-col [nzSm]="0" [nzXs]="0" [nzMd]="17" [nzXl]="19" [nzXXl]="20">
+      <div class="search-box">
+        <nz-input-group [nzPrefix]="prefixTemplate">
+          <input type="text" nz-input placeholder="Search this">
+        </nz-input-group>
+        <ng-template #prefixTemplate><i nz-icon type="search"></i></ng-template>
+      </div>
+      <div class="header-action">
+        <nz-select nzSize="small" [(ngModel)]="headerAction">
+          <nz-option [nzValue]="1" nzLabel="Hoang"></nz-option>
+          <nz-option [nzValue]="2" nzLabel="Logout"></nz-option>
+        </nz-select>
+      </div>
+
+    </div>
+  </section>
+</header>
+
